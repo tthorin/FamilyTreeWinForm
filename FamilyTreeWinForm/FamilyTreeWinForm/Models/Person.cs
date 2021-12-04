@@ -49,7 +49,7 @@ namespace FamilyTreeWF.Models
         {
             get
             {
-                return $"{FirstName} {LastName} (b: {BirthYear}{(DeathYear==null||DeathYear==0?"":", d: "+DeathYear)})";
+                return $"{FirstName} {LastName} ({BirthYear}{(DeathYear==null||DeathYear==0?"":", "+DeathYear)})";
             }
         }
     }
