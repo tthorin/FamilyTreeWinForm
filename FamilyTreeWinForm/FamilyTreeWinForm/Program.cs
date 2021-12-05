@@ -9,7 +9,7 @@ namespace FamilyTreeWF
         static void Main()
         {
             Database.DbInitializer.Initialize(new Database.DbAccess());
-            
+
             ApplicationConfiguration.Initialize();
 
             Application.Run(new Forms.MainWindow());

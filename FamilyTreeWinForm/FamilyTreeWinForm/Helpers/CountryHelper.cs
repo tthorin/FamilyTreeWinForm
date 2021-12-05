@@ -9,6 +9,7 @@ namespace FamilyTreeWF.Helpers
     using FamilyTreeWF.DTO;
     using FamilyTreeWF.Models;
     using Microsoft.EntityFrameworkCore;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -26,6 +27,16 @@ namespace FamilyTreeWF.Helpers
                 }
             }
             return rows;
+        }
+        internal static int RenameCountry(Country country)
+        {
+            var result = 0;
+            using (var db = new DbAccess())
+            {
+                db.Countries?.Update(country);
+                result = db.SaveChanges();
+            }
+            return result;
         }
         public static Country AddCountry(Country country)
         {

@@ -37,20 +37,9 @@ namespace FamilyTreeWF.Models
         [ForeignKey("MotherId")]
         public Person? Mother { get; set; }
         [NotMapped]
-        public string FullName
-        {
-            get
-            {
-                return $"{FirstName} {LastName}";
-            }
-        }
+        public string FullName { get => $"{FirstName} {LastName}"; }
         [NotMapped]
-        public string FullNameAndLifeTime
-        {
-            get
-            {
-                return $"{FirstName} {LastName} ({BirthYear}{(DeathYear==null||DeathYear==0?"":", "+DeathYear)})";
-            }
-        }
+
+        public string FullNameAndLifeTime { get => $"{FirstName} {LastName} ({BirthYear}{(DeathYear == null || DeathYear == 0 ? "" : ", " + DeathYear)})"; }
     }
 }

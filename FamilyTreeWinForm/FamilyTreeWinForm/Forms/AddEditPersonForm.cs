@@ -38,65 +38,98 @@ namespace FamilyTreeWF.Forms
 
         private void UpdateLocationBindings()
         {
-            cb_birthCountry.DataSource = CountryHelper.GetAllCountryNames();
-            cb_deathCountry.DataSource = CountryHelper.GetAllCountryNames();
+            UpdateCountryDataSources();
+            UpdateCityDataSources();
+        }
 
+        private void UpdateCityDataSources()
+        {
             cb_birthCity.DataSource = CityHelper.GetAllCityNames();
             cb_deathCity.DataSource = CityHelper.GetAllCityNames();
+        }
+
+        private void UpdateCountryDataSources()
+        {
+            cb_birthCountry.DataSource = CountryHelper.GetAllCountryNames();
+            cb_deathCountry.DataSource = CountryHelper.GetAllCountryNames();
         }
 
         private void B_addCountry_Click(object sender, EventArgs e)
         {
             AddRemoveCountry arc = new();
             arc.ShowDialog();
-            cb_birthCountry.DataSource = CountryHelper.GetAllCountryNames();
-            cb_deathCountry.DataSource = CountryHelper.GetAllCountryNames();
+            UpdateCountryDataSources();
         }
 
         private void B_addCity_Click(object sender, EventArgs e)
         {
             AddRemoveCity arCity = new();
             arCity.ShowDialog();
-            cb_birthCity.DataSource = CityHelper.GetAllCityNames();
-            cb_deathCity.DataSource = CityHelper.GetAllCityNames();
+            UpdateCityDataSources();
         }
 
         private void AddEditPersonForm_Load(object sender, EventArgs e)
         {
             UpdateLocationBindings();
+            SetupParentComboBoxes();
             if (person.PersonId != 0)
             {
-                cb_father.DataSource = PersonHelper.GetAllFirstLastNames(true, true, (int)person.PersonId);
-                cb_mother.DataSource = PersonHelper.GetAllFirstLastNames(true, true, (int)person.PersonId);
+                SetupFirstAndLastNames();
+                SetupBirthData();
+                SetUpDeathData();
+            }
+        }
 
-                tb_firstName.Text = person.FirstName;
-                tb_lastName.Text = person.LastName;
-                num_birthYear.Value = person.BirthYear;
-                if (person.BirthCity != null) cb_birthCity.SelectedValue = person.BirthCity.CityId;
-                if (person.BirthCountry != null) cb_birthCountry.SelectedValue = person.BirthCountry.CountryId;
-                num_deathYear.Value = person.DeathYear ?? 0;
-                check_deceased.Checked = person.DeathYear != null && person.DeathYear != 0;
-                if (person.DeathCity != null) cb_deathCity.SelectedValue = person.DeathCity.CityId;
-                if (person.DeathCountry != null) cb_deathCountry.SelectedValue = person.DeathCountry.CountryId;
-                cb_father.SelectedValue = person.Father != null ? person.Father.PersonId : -1;
-                cb_mother.SelectedValue = person.Mother != null ? person.Mother.PersonId : -1;
+        private void SetupFirstAndLastNames()
+        {
+            tb_firstName.Text = person.FirstName;
+            tb_lastName.Text = person.LastName;
+        }
+
+        private void SetUpDeathData()
+        {
+            num_deathYear.Value = person.DeathYear ?? 0;
+            check_deceased.Checked = person.DeathYear != null && person.DeathYear != 0;
+            if (person.DeathCity != null) cb_deathCity.SelectedValue = person.DeathCity.CityId;
+            if (person.DeathCountry != null) cb_deathCountry.SelectedValue = person.DeathCountry.CountryId;
+        }
+
+        private void SetupBirthData()
+        {
+            num_birthYear.Value = person.BirthYear;
+            if (person.BirthCity != null) cb_birthCity.SelectedValue = person.BirthCity.CityId;
+            if (person.BirthCountry != null) cb_birthCountry.SelectedValue = person.BirthCountry.CountryId;
+        }
+
+        private void SetupParentComboBoxes()
+        {
+            if (person.PersonId != 0)
+            {
+                cb_father.DataSource = PersonHelper.GetAllFirstLastNames(true, true, person.PersonId);
+                cb_mother.DataSource = PersonHelper.GetAllFirstLastNames(true, true, person.PersonId);
             }
             else
             {
                 cb_father.DataSource = PersonHelper.GetAllFirstLastNames();
                 cb_mother.DataSource = PersonHelper.GetAllFirstLastNames();
             }
+            cb_father.SelectedValue = person.Father != null ? person.Father.PersonId : -1;
+            cb_mother.SelectedValue = person.Mother != null ? person.Mother.PersonId : -1;
         }
+
         private void SetPersonValues()
         {
             person.FirstName = tb_firstName.Text.Trim();
             person.LastName = tb_lastName.Text.Trim();
+
             person.BirthYear = (int)num_birthYear.Value;
             person.BirthCityId = (int)cb_birthCity.SelectedValue != -1 ? (int)cb_birthCity.SelectedValue : null;
             person.BirthCountryId = (int)cb_birthCountry.SelectedValue != -1 ? (int)cb_birthCountry.SelectedValue : null;
+
             person.DeathYear = (int)num_deathYear.Value;
             person.DeathCityId = (int)cb_deathCity.SelectedValue != -1 ? (int)cb_deathCity.SelectedValue : null;
             person.DeathCountryId = (int)cb_deathCountry.SelectedValue != -1 ? (int)cb_deathCountry.SelectedValue : null;
+
             person.FatherId = (int)cb_father.SelectedValue != -1 ? (int)cb_father.SelectedValue : null;
             person.MotherId = (int)cb_mother.SelectedValue != -1 ? (int)cb_mother.SelectedValue : null;
         }
