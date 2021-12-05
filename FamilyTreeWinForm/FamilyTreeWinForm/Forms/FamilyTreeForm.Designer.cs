@@ -73,9 +73,9 @@ namespace FamilyTreeWF.Forms
             this.l_pGrandFather.AutoSize = true;
             this.l_pGrandFather.BackColor = System.Drawing.SystemColors.Control;
             this.l_pGrandFather.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_pGrandFather.Location = new System.Drawing.Point(12, 13);
+            this.l_pGrandFather.Location = new System.Drawing.Point(12, 8);
             this.l_pGrandFather.Name = "l_pGrandFather";
-            this.l_pGrandFather.Size = new System.Drawing.Size(127, 15);
+            this.l_pGrandFather.Size = new System.Drawing.Size(162, 21);
             this.l_pGrandFather.TabIndex = 0;
             this.l_pGrandFather.Text = "Paternal Grandfather:";
             // 
@@ -87,7 +87,7 @@ namespace FamilyTreeWF.Forms
             this.tb_pGrandFather.Location = new System.Drawing.Point(12, 32);
             this.tb_pGrandFather.Name = "tb_pGrandFather";
             this.tb_pGrandFather.ReadOnly = true;
-            this.tb_pGrandFather.Size = new System.Drawing.Size(224, 16);
+            this.tb_pGrandFather.Size = new System.Drawing.Size(224, 20);
             this.tb_pGrandFather.TabIndex = 1;
             this.tb_pGrandFather.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_pGrandFather.DoubleClick += new System.EventHandler(this.Textbox_DoubleClick);
@@ -100,7 +100,7 @@ namespace FamilyTreeWF.Forms
             this.tb_pGrandMother.Location = new System.Drawing.Point(242, 32);
             this.tb_pGrandMother.Name = "tb_pGrandMother";
             this.tb_pGrandMother.ReadOnly = true;
-            this.tb_pGrandMother.Size = new System.Drawing.Size(224, 16);
+            this.tb_pGrandMother.Size = new System.Drawing.Size(224, 20);
             this.tb_pGrandMother.TabIndex = 3;
             this.tb_pGrandMother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_pGrandMother.DoubleClick += new System.EventHandler(this.Textbox_DoubleClick);
@@ -110,9 +110,9 @@ namespace FamilyTreeWF.Forms
             this.l_pGrandMother.AutoSize = true;
             this.l_pGrandMother.BackColor = System.Drawing.SystemColors.Control;
             this.l_pGrandMother.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_pGrandMother.Location = new System.Drawing.Point(242, 13);
+            this.l_pGrandMother.Location = new System.Drawing.Point(242, 8);
             this.l_pGrandMother.Name = "l_pGrandMother";
-            this.l_pGrandMother.Size = new System.Drawing.Size(133, 15);
+            this.l_pGrandMother.Size = new System.Drawing.Size(172, 21);
             this.l_pGrandMother.TabIndex = 2;
             this.l_pGrandMother.Text = "Paternal Grandmother:";
             // 
@@ -124,7 +124,7 @@ namespace FamilyTreeWF.Forms
             this.tb_mGrandMother.Location = new System.Drawing.Point(762, 32);
             this.tb_mGrandMother.Name = "tb_mGrandMother";
             this.tb_mGrandMother.ReadOnly = true;
-            this.tb_mGrandMother.Size = new System.Drawing.Size(224, 16);
+            this.tb_mGrandMother.Size = new System.Drawing.Size(224, 20);
             this.tb_mGrandMother.TabIndex = 7;
             this.tb_mGrandMother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_mGrandMother.DoubleClick += new System.EventHandler(this.Textbox_DoubleClick);
@@ -134,9 +134,9 @@ namespace FamilyTreeWF.Forms
             this.l_mGrandMother.AutoSize = true;
             this.l_mGrandMother.BackColor = System.Drawing.SystemColors.Control;
             this.l_mGrandMother.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_mGrandMother.Location = new System.Drawing.Point(762, 13);
+            this.l_mGrandMother.Location = new System.Drawing.Point(762, 8);
             this.l_mGrandMother.Name = "l_mGrandMother";
-            this.l_mGrandMother.Size = new System.Drawing.Size(137, 15);
+            this.l_mGrandMother.Size = new System.Drawing.Size(178, 21);
             this.l_mGrandMother.TabIndex = 6;
             this.l_mGrandMother.Text = "Maternal Grandmother:";
             // 
@@ -148,7 +148,7 @@ namespace FamilyTreeWF.Forms
             this.tb_mGrandFather.Location = new System.Drawing.Point(532, 32);
             this.tb_mGrandFather.Name = "tb_mGrandFather";
             this.tb_mGrandFather.ReadOnly = true;
-            this.tb_mGrandFather.Size = new System.Drawing.Size(224, 16);
+            this.tb_mGrandFather.Size = new System.Drawing.Size(224, 20);
             this.tb_mGrandFather.TabIndex = 5;
             this.tb_mGrandFather.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_mGrandFather.DoubleClick += new System.EventHandler(this.Textbox_DoubleClick);
@@ -158,20 +158,21 @@ namespace FamilyTreeWF.Forms
             this.l_mGrandFather.AutoSize = true;
             this.l_mGrandFather.BackColor = System.Drawing.SystemColors.Control;
             this.l_mGrandFather.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_mGrandFather.Location = new System.Drawing.Point(532, 13);
+            this.l_mGrandFather.Location = new System.Drawing.Point(532, 8);
             this.l_mGrandFather.Name = "l_mGrandFather";
-            this.l_mGrandFather.Size = new System.Drawing.Size(131, 15);
+            this.l_mGrandFather.Size = new System.Drawing.Size(168, 21);
             this.l_mGrandFather.TabIndex = 4;
             this.l_mGrandFather.Text = "Maternal Grandfather:";
+            this.l_mGrandFather.Click += new System.EventHandler(this.l_mGrandFather_Click);
             // 
             // l_mother
             // 
             this.l_mother.AutoSize = true;
             this.l_mother.BackColor = System.Drawing.SystemColors.Control;
             this.l_mother.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_mother.Location = new System.Drawing.Point(532, 91);
+            this.l_mother.Location = new System.Drawing.Point(532, 88);
             this.l_mother.Name = "l_mother";
-            this.l_mother.Size = new System.Drawing.Size(50, 15);
+            this.l_mother.Size = new System.Drawing.Size(68, 21);
             this.l_mother.TabIndex = 12;
             this.l_mother.Text = "Mother:";
             // 
@@ -194,9 +195,9 @@ namespace FamilyTreeWF.Forms
             this.l_father.AutoSize = true;
             this.l_father.BackColor = System.Drawing.SystemColors.Control;
             this.l_father.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_father.Location = new System.Drawing.Point(308, 91);
+            this.l_father.Location = new System.Drawing.Point(312, 88);
             this.l_father.Name = "l_father";
-            this.l_father.Size = new System.Drawing.Size(45, 15);
+            this.l_father.Size = new System.Drawing.Size(60, 21);
             this.l_father.TabIndex = 10;
             this.l_father.Text = "Father:";
             // 
@@ -220,7 +221,7 @@ namespace FamilyTreeWF.Forms
             this.l_person_data.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_person_data.Location = new System.Drawing.Point(518, 249);
             this.l_person_data.Name = "l_person_data";
-            this.l_person_data.Size = new System.Drawing.Size(87, 15);
+            this.l_person_data.Size = new System.Drawing.Size(110, 21);
             this.l_person_data.TabIndex = 22;
             this.l_person_data.Text = "Personal data:";
             // 
@@ -231,10 +232,10 @@ namespace FamilyTreeWF.Forms
             this.lb_pUncleAunt.DisplayMember = "FullNameAndLifeTime";
             this.lb_pUncleAunt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_pUncleAunt.FormattingEnabled = true;
-            this.lb_pUncleAunt.ItemHeight = 15;
+            this.lb_pUncleAunt.ItemHeight = 19;
             this.lb_pUncleAunt.Location = new System.Drawing.Point(12, 112);
             this.lb_pUncleAunt.Name = "lb_pUncleAunt";
-            this.lb_pUncleAunt.Size = new System.Drawing.Size(214, 90);
+            this.lb_pUncleAunt.Size = new System.Drawing.Size(214, 76);
             this.lb_pUncleAunt.TabIndex = 9;
             this.lb_pUncleAunt.ValueMember = "PersonId";
             this.lb_pUncleAunt.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
@@ -246,10 +247,10 @@ namespace FamilyTreeWF.Forms
             this.lb_mUncleAunt.DisplayMember = "FullNameAndLifeTime";
             this.lb_mUncleAunt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_mUncleAunt.FormattingEnabled = true;
-            this.lb_mUncleAunt.ItemHeight = 15;
+            this.lb_mUncleAunt.ItemHeight = 19;
             this.lb_mUncleAunt.Location = new System.Drawing.Point(775, 112);
             this.lb_mUncleAunt.Name = "lb_mUncleAunt";
-            this.lb_mUncleAunt.Size = new System.Drawing.Size(214, 90);
+            this.lb_mUncleAunt.Size = new System.Drawing.Size(214, 76);
             this.lb_mUncleAunt.TabIndex = 15;
             this.lb_mUncleAunt.ValueMember = "PersonId";
             this.lb_mUncleAunt.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
@@ -261,10 +262,10 @@ namespace FamilyTreeWF.Forms
             this.lb_siblings.DisplayMember = "FullNameAndLifeTime";
             this.lb_siblings.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_siblings.FormattingEnabled = true;
-            this.lb_siblings.ItemHeight = 15;
+            this.lb_siblings.ItemHeight = 19;
             this.lb_siblings.Location = new System.Drawing.Point(266, 273);
             this.lb_siblings.Name = "lb_siblings";
-            this.lb_siblings.Size = new System.Drawing.Size(214, 90);
+            this.lb_siblings.Size = new System.Drawing.Size(214, 76);
             this.lb_siblings.TabIndex = 21;
             this.lb_siblings.ValueMember = "PersonId";
             this.lb_siblings.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
@@ -276,10 +277,10 @@ namespace FamilyTreeWF.Forms
             this.lb_mCousins.DisplayMember = "FullNameAndLifeTime";
             this.lb_mCousins.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_mCousins.FormattingEnabled = true;
-            this.lb_mCousins.ItemHeight = 15;
+            this.lb_mCousins.ItemHeight = 19;
             this.lb_mCousins.Location = new System.Drawing.Point(775, 273);
             this.lb_mCousins.Name = "lb_mCousins";
-            this.lb_mCousins.Size = new System.Drawing.Size(214, 90);
+            this.lb_mCousins.Size = new System.Drawing.Size(214, 76);
             this.lb_mCousins.TabIndex = 25;
             this.lb_mCousins.ValueMember = "PersonId";
             this.lb_mCousins.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
@@ -291,10 +292,10 @@ namespace FamilyTreeWF.Forms
             this.lb_children.DisplayMember = "FullNameAndLifeTime";
             this.lb_children.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_children.FormattingEnabled = true;
-            this.lb_children.ItemHeight = 15;
+            this.lb_children.ItemHeight = 19;
             this.lb_children.Location = new System.Drawing.Point(353, 391);
             this.lb_children.Name = "lb_children";
-            this.lb_children.Size = new System.Drawing.Size(295, 90);
+            this.lb_children.Size = new System.Drawing.Size(295, 76);
             this.lb_children.TabIndex = 27;
             this.lb_children.ValueMember = "PersonId";
             this.lb_children.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
@@ -304,9 +305,9 @@ namespace FamilyTreeWF.Forms
             this.l_siblings.AutoSize = true;
             this.l_siblings.BackColor = System.Drawing.SystemColors.Control;
             this.l_siblings.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_siblings.Location = new System.Drawing.Point(266, 255);
+            this.l_siblings.Location = new System.Drawing.Point(266, 249);
             this.l_siblings.Name = "l_siblings";
-            this.l_siblings.Size = new System.Drawing.Size(54, 15);
+            this.l_siblings.Size = new System.Drawing.Size(68, 21);
             this.l_siblings.TabIndex = 20;
             this.l_siblings.Text = "Siblings:";
             // 
@@ -315,9 +316,9 @@ namespace FamilyTreeWF.Forms
             this.l_mCousins.AutoSize = true;
             this.l_mCousins.BackColor = System.Drawing.SystemColors.Control;
             this.l_mCousins.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_mCousins.Location = new System.Drawing.Point(775, 255);
+            this.l_mCousins.Location = new System.Drawing.Point(775, 249);
             this.l_mCousins.Name = "l_mCousins";
-            this.l_mCousins.Size = new System.Drawing.Size(107, 15);
+            this.l_mCousins.Size = new System.Drawing.Size(135, 21);
             this.l_mCousins.TabIndex = 24;
             this.l_mCousins.Text = "Maternal cousins:";
             // 
@@ -326,9 +327,9 @@ namespace FamilyTreeWF.Forms
             this.l_children.AutoSize = true;
             this.l_children.BackColor = System.Drawing.SystemColors.Control;
             this.l_children.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_children.Location = new System.Drawing.Point(470, 373);
+            this.l_children.Location = new System.Drawing.Point(462, 367);
             this.l_children.Name = "l_children";
-            this.l_children.Size = new System.Drawing.Size(57, 15);
+            this.l_children.Size = new System.Drawing.Size(73, 21);
             this.l_children.TabIndex = 26;
             this.l_children.Text = "Children:";
             // 
@@ -337,20 +338,21 @@ namespace FamilyTreeWF.Forms
             this.l_mUncleAunt.AutoSize = true;
             this.l_mUncleAunt.BackColor = System.Drawing.SystemColors.Control;
             this.l_mUncleAunt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_mUncleAunt.Location = new System.Drawing.Point(775, 94);
+            this.l_mUncleAunt.Location = new System.Drawing.Point(775, 88);
             this.l_mUncleAunt.Name = "l_mUncleAunt";
-            this.l_mUncleAunt.Size = new System.Drawing.Size(158, 15);
+            this.l_mUncleAunt.Size = new System.Drawing.Size(200, 21);
             this.l_mUncleAunt.TabIndex = 14;
             this.l_mUncleAunt.Text = "Maternal uncles and aunts:";
+            this.l_mUncleAunt.Click += new System.EventHandler(this.l_mUncleAunt_Click);
             // 
             // l_pUncleAunt
             // 
             this.l_pUncleAunt.AutoSize = true;
             this.l_pUncleAunt.BackColor = System.Drawing.SystemColors.Control;
             this.l_pUncleAunt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_pUncleAunt.Location = new System.Drawing.Point(12, 94);
+            this.l_pUncleAunt.Location = new System.Drawing.Point(12, 88);
             this.l_pUncleAunt.Name = "l_pUncleAunt";
-            this.l_pUncleAunt.Size = new System.Drawing.Size(154, 15);
+            this.l_pUncleAunt.Size = new System.Drawing.Size(194, 21);
             this.l_pUncleAunt.TabIndex = 8;
             this.l_pUncleAunt.Text = "Paternal uncles and aunts:";
             // 
@@ -359,9 +361,9 @@ namespace FamilyTreeWF.Forms
             this.l_pCousins.AutoSize = true;
             this.l_pCousins.BackColor = System.Drawing.SystemColors.Control;
             this.l_pCousins.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_pCousins.Location = new System.Drawing.Point(12, 255);
+            this.l_pCousins.Location = new System.Drawing.Point(12, 249);
             this.l_pCousins.Name = "l_pCousins";
-            this.l_pCousins.Size = new System.Drawing.Size(103, 15);
+            this.l_pCousins.Size = new System.Drawing.Size(129, 21);
             this.l_pCousins.TabIndex = 18;
             this.l_pCousins.Text = "Paternal cousins:";
             // 
@@ -372,10 +374,10 @@ namespace FamilyTreeWF.Forms
             this.lb_pCousins.DisplayMember = "FullNameAndLifeTime";
             this.lb_pCousins.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_pCousins.FormattingEnabled = true;
-            this.lb_pCousins.ItemHeight = 15;
+            this.lb_pCousins.ItemHeight = 19;
             this.lb_pCousins.Location = new System.Drawing.Point(12, 273);
             this.lb_pCousins.Name = "lb_pCousins";
-            this.lb_pCousins.Size = new System.Drawing.Size(214, 90);
+            this.lb_pCousins.Size = new System.Drawing.Size(214, 76);
             this.lb_pCousins.TabIndex = 19;
             this.lb_pCousins.ValueMember = "PersonId";
             this.lb_pCousins.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
@@ -388,7 +390,7 @@ namespace FamilyTreeWF.Forms
             this.tb_personName.Location = new System.Drawing.Point(321, 163);
             this.tb_personName.Name = "tb_personName";
             this.tb_personName.ReadOnly = true;
-            this.tb_personName.Size = new System.Drawing.Size(356, 43);
+            this.tb_personName.Size = new System.Drawing.Size(356, 54);
             this.tb_personName.TabIndex = 16;
             this.tb_personName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -400,7 +402,7 @@ namespace FamilyTreeWF.Forms
             this.tb_partnerName.Location = new System.Drawing.Point(453, 212);
             this.tb_partnerName.Name = "tb_partnerName";
             this.tb_partnerName.ReadOnly = true;
-            this.tb_partnerName.Size = new System.Drawing.Size(224, 16);
+            this.tb_partnerName.Size = new System.Drawing.Size(224, 20);
             this.tb_partnerName.TabIndex = 17;
             this.tb_partnerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_partnerName.DoubleClick += new System.EventHandler(this.Textbox_DoubleClick);
@@ -428,7 +430,7 @@ namespace FamilyTreeWF.Forms
             this.cb_selectPerson.FormattingEnabled = true;
             this.cb_selectPerson.Location = new System.Drawing.Point(728, 426);
             this.cb_selectPerson.Name = "cb_selectPerson";
-            this.cb_selectPerson.Size = new System.Drawing.Size(224, 23);
+            this.cb_selectPerson.Size = new System.Drawing.Size(224, 27);
             this.cb_selectPerson.TabIndex = 29;
             this.cb_selectPerson.ValueMember = "PersonId";
             // 
@@ -437,18 +439,19 @@ namespace FamilyTreeWF.Forms
             this.l_selectPerson.AutoSize = true;
             this.l_selectPerson.BackColor = System.Drawing.SystemColors.Control;
             this.l_selectPerson.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_selectPerson.Location = new System.Drawing.Point(727, 408);
+            this.l_selectPerson.Location = new System.Drawing.Point(728, 401);
             this.l_selectPerson.Name = "l_selectPerson";
-            this.l_selectPerson.Size = new System.Drawing.Size(202, 15);
+            this.l_selectPerson.Size = new System.Drawing.Size(261, 21);
             this.l_selectPerson.TabIndex = 28;
             this.l_selectPerson.Text = "from list to re-center family tree on:";
             // 
             // b_go
             // 
+            this.b_go.AutoSize = true;
             this.b_go.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_go.Location = new System.Drawing.Point(959, 425);
             this.b_go.Name = "b_go";
-            this.b_go.Size = new System.Drawing.Size(75, 23);
+            this.b_go.Size = new System.Drawing.Size(75, 31);
             this.b_go.TabIndex = 30;
             this.b_go.Text = "Go!";
             this.b_go.UseVisualStyleBackColor = true;
@@ -456,10 +459,11 @@ namespace FamilyTreeWF.Forms
             // 
             // b_close
             // 
+            this.b_close.AutoSize = true;
             this.b_close.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_close.Location = new System.Drawing.Point(959, 465);
             this.b_close.Name = "b_close";
-            this.b_close.Size = new System.Drawing.Size(75, 23);
+            this.b_close.Size = new System.Drawing.Size(75, 31);
             this.b_close.TabIndex = 31;
             this.b_close.Text = "Close";
             this.b_close.UseVisualStyleBackColor = true;
@@ -468,15 +472,16 @@ namespace FamilyTreeWF.Forms
             // l_selectPerson0
             // 
             this.l_selectPerson0.AutoSize = true;
-            this.l_selectPerson0.Location = new System.Drawing.Point(728, 391);
+            this.l_selectPerson0.Location = new System.Drawing.Point(728, 380);
             this.l_selectPerson0.Name = "l_selectPerson0";
-            this.l_selectPerson0.Size = new System.Drawing.Size(220, 15);
+            this.l_selectPerson0.Size = new System.Drawing.Size(279, 21);
             this.l_selectPerson0.TabIndex = 32;
             this.l_selectPerson0.Text = "Double click a name or select someone";
+            this.l_selectPerson0.Click += new System.EventHandler(this.l_selectPerson0_Click);
             // 
             // FamilyTreeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.b_close;
