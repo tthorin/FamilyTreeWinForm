@@ -181,10 +181,9 @@ namespace FamilyTreeWF.Forms
             this.tb_father.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_father.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_father.Location = new System.Drawing.Point(266, 109);
-            this.tb_father.Multiline = true;
             this.tb_father.Name = "tb_father";
             this.tb_father.ReadOnly = true;
-            this.tb_father.Size = new System.Drawing.Size(224, 23);
+            this.tb_father.Size = new System.Drawing.Size(224, 17);
             this.tb_father.TabIndex = 11;
             this.tb_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_father.DoubleClick += new System.EventHandler(this.Textbox_DoubleClick);
@@ -388,6 +387,7 @@ namespace FamilyTreeWF.Forms
             this.tb_personName.Location = new System.Drawing.Point(321, 163);
             this.tb_personName.Name = "tb_personName";
             this.tb_personName.ReadOnly = true;
+
             this.tb_personName.Size = new System.Drawing.Size(356, 54);
             this.tb_personName.TabIndex = 16;
             this.tb_personName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
