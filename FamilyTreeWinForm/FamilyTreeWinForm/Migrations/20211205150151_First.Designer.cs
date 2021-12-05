@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace NET21_OOA_2.Migrations
+namespace FamilyTreeWF.Migrations
 {
     [DbContext(typeof(DbAccess))]
-    [Migration("20211128202336_first")]
-    partial class first
+    [Migration("20211205150151_First")]
+    partial class First
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

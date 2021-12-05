@@ -2,9 +2,9 @@
 
 #nullable disable
 
-namespace NET21_OOA_2.Migrations
+namespace FamilyTreeWF.Migrations
 {
-    public partial class first : Migration
+    public partial class First : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

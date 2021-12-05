@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace NET21_OOA_2.Migrations
+namespace FamilyTreeWF.Migrations
 {
     [DbContext(typeof(DbAccess))]
     partial class DbAccessModelSnapshot : ModelSnapshot

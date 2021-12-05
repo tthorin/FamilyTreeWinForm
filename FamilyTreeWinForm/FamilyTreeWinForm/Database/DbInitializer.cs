@@ -15,7 +15,8 @@ namespace FamilyTreeWF.Database
         {
             using (db)
             {
-                db.Database.EnsureCreated();
+                var created = db.Database.EnsureCreated();
+                if (created) MessageBox.Show("Database created.","Database");
 
                 if (db.Cities?.Any() == true)
                 {
@@ -97,7 +98,7 @@ namespace FamilyTreeWF.Database
                     db.People?.Add(p);
                 }
                 var result = db.SaveChanges();
-                if (result > 0) MessageBox.Show("Done creating and populating database.", "Database");
+                if (result > 0) MessageBox.Show("Done populating database.", "Database");
             }
         }
     }
