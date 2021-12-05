@@ -163,7 +163,6 @@ namespace FamilyTreeWF.Forms
             this.l_mGrandFather.Size = new System.Drawing.Size(168, 21);
             this.l_mGrandFather.TabIndex = 4;
             this.l_mGrandFather.Text = "Maternal Grandfather:";
-            this.l_mGrandFather.Click += new System.EventHandler(this.l_mGrandFather_Click);
             // 
             // l_mother
             // 
@@ -343,7 +342,6 @@ namespace FamilyTreeWF.Forms
             this.l_mUncleAunt.Size = new System.Drawing.Size(200, 21);
             this.l_mUncleAunt.TabIndex = 14;
             this.l_mUncleAunt.Text = "Maternal uncles and aunts:";
-            this.l_mUncleAunt.Click += new System.EventHandler(this.l_mUncleAunt_Click);
             // 
             // l_pUncleAunt
             // 
@@ -477,7 +475,6 @@ namespace FamilyTreeWF.Forms
             this.l_selectPerson0.Size = new System.Drawing.Size(279, 21);
             this.l_selectPerson0.TabIndex = 32;
             this.l_selectPerson0.Text = "Double click a name or select someone";
-            this.l_selectPerson0.Click += new System.EventHandler(this.l_selectPerson0_Click);
             // 
             // FamilyTreeForm
             // 
