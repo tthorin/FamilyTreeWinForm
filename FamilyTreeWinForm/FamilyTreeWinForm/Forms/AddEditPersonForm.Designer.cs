@@ -338,7 +338,6 @@ namespace FamilyTreeWF.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
             this.CancelButton = this.b_cancel;
             this.ClientSize = new System.Drawing.Size(421, 430);
             this.Controls.Add(this.l_firstName);
