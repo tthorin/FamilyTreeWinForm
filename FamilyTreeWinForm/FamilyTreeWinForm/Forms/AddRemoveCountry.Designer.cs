@@ -33,25 +33,26 @@ namespace FamilyTreeWF.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.b_ok = new System.Windows.Forms.Button();
+            this.b_add = new System.Windows.Forms.Button();
             this.l_country = new System.Windows.Forms.Label();
             this.cb_countries = new System.Windows.Forms.ComboBox();
             this.l_explanation1 = new System.Windows.Forms.Label();
             this.l_explanation2 = new System.Windows.Forms.Label();
             this.b_cancel = new System.Windows.Forms.Button();
+            this.b_removeEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // b_ok
+            // b_add
             // 
-            this.b_ok.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_ok.Location = new System.Drawing.Point(65, 83);
-            this.b_ok.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.b_ok.Name = "b_ok";
-            this.b_ok.Size = new System.Drawing.Size(85, 28);
-            this.b_ok.TabIndex = 4;
-            this.b_ok.Text = "Ok";
-            this.b_ok.UseVisualStyleBackColor = true;
-            this.b_ok.Click += new System.EventHandler(this.B_addCountry_Click);
+            this.b_add.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_add.Location = new System.Drawing.Point(29, 83);
+            this.b_add.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.b_add.Name = "b_add";
+            this.b_add.Size = new System.Drawing.Size(85, 28);
+            this.b_add.TabIndex = 4;
+            this.b_add.Text = "Add";
+            this.b_add.UseVisualStyleBackColor = true;
+            this.b_add.Click += new System.EventHandler(this.B_addCountry_Click);
             // 
             // l_country
             // 
@@ -72,6 +73,8 @@ namespace FamilyTreeWF.Forms
             this.cb_countries.Name = "cb_countries";
             this.cb_countries.Size = new System.Drawing.Size(213, 26);
             this.cb_countries.TabIndex = 3;
+            this.cb_countries.SelectedIndexChanged += new System.EventHandler(this.Cb_countries_SelectedIndexChanged);
+            this.cb_countries.TextChanged += new System.EventHandler(this.Cb_countries_TextChanged);
             // 
             // l_explanation1
             // 
@@ -79,9 +82,9 @@ namespace FamilyTreeWF.Forms
             this.l_explanation1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_explanation1.Location = new System.Drawing.Point(12, 9);
             this.l_explanation1.Name = "l_explanation1";
-            this.l_explanation1.Size = new System.Drawing.Size(267, 18);
+            this.l_explanation1.Size = new System.Drawing.Size(283, 18);
             this.l_explanation1.TabIndex = 0;
-            this.l_explanation1.Text = "Enter the name of a new country to create";
+            this.l_explanation1.Text = "Enter the name of a new country to create or";
             // 
             // l_explanation2
             // 
@@ -89,14 +92,14 @@ namespace FamilyTreeWF.Forms
             this.l_explanation2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_explanation2.Location = new System.Drawing.Point(12, 27);
             this.l_explanation2.Name = "l_explanation2";
-            this.l_explanation2.Size = new System.Drawing.Size(251, 18);
+            this.l_explanation2.Size = new System.Drawing.Size(302, 18);
             this.l_explanation2.TabIndex = 1;
-            this.l_explanation2.Text = "or select an existing country to remove.";
+            this.l_explanation2.Text = "select an existing country to rename or remove.";
             // 
             // b_cancel
             // 
             this.b_cancel.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_cancel.Location = new System.Drawing.Point(158, 83);
+            this.b_cancel.Location = new System.Drawing.Point(215, 83);
             this.b_cancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.b_cancel.Name = "b_cancel";
             this.b_cancel.Size = new System.Drawing.Size(85, 28);
@@ -104,25 +107,38 @@ namespace FamilyTreeWF.Forms
             this.b_cancel.Text = "Cancel";
             this.b_cancel.UseVisualStyleBackColor = true;
             // 
+            // b_removeEdit
+            // 
+            this.b_removeEdit.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_removeEdit.Location = new System.Drawing.Point(122, 83);
+            this.b_removeEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.b_removeEdit.Name = "b_removeEdit";
+            this.b_removeEdit.Size = new System.Drawing.Size(85, 28);
+            this.b_removeEdit.TabIndex = 6;
+            this.b_removeEdit.Text = "Remove";
+            this.b_removeEdit.UseVisualStyleBackColor = true;
+            this.b_removeEdit.Click += new System.EventHandler(this.B_removeEdit_Click);
+            // 
             // AddRemoveCountry
             // 
-            this.AcceptButton = this.b_ok;
+            this.AcceptButton = this.b_add;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.b_cancel;
-            this.ClientSize = new System.Drawing.Size(312, 121);
+            this.ClientSize = new System.Drawing.Size(322, 121);
+            this.Controls.Add(this.b_removeEdit);
             this.Controls.Add(this.b_cancel);
             this.Controls.Add(this.l_explanation2);
             this.Controls.Add(this.l_explanation1);
             this.Controls.Add(this.cb_countries);
-            this.Controls.Add(this.b_ok);
+            this.Controls.Add(this.b_add);
             this.Controls.Add(this.l_country);
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AddRemoveCountry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Add or remove city";
+            this.Text = "Add or remove country";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,11 +146,12 @@ namespace FamilyTreeWF.Forms
 
         #endregion
 
-        private Button b_ok;
+        private Button b_add;
         private Label l_country;
         private ComboBox cb_countries;
         private Label l_explanation1;
         private Label l_explanation2;
         private Button b_cancel;
+        private Button b_removeEdit;
     }
 }

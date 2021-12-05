@@ -16,7 +16,7 @@ namespace FamilyTreeWF.Forms
 
     public partial class FamilyTreeForm : Form
     {
-        private Person person= new();
+        private Person person = new();
         private List<Person> children = new();
         private List<Person> siblings = new();
         private List<Person> cousins = new();

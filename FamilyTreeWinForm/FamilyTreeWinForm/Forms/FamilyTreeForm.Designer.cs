@@ -517,6 +517,7 @@ namespace FamilyTreeWF.Forms
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FamilyTreeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Family Tree";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FamilyTreeForm_Paint);
             this.ResumeLayout(false);
