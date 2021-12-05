@@ -101,14 +101,8 @@ namespace FamilyTreeWF.Forms
         {
             CheckRadioButtons();
 
-            if (filteredPeople.Count == 0)
-            {
-                DisconnectDataSources();
-            }
-            else
-            {
-                ResetPeopleListDataSource();
-            }
+            if (filteredPeople.Count == 0) DisconnectDataSources();
+            else ResetPeopleListDataSource();
             cb_filter.Text = "";
             ClearRadioButtons();
             UpdateFilterComboBox();
@@ -119,7 +113,7 @@ namespace FamilyTreeWF.Forms
         {
             lb_peopleList.DataSource = null;
             lb_peopleList.DataSource = filteredPeople;
-            ResetListboxes();
+            SetListboxesDisplayAndValueMembers();
         }
 
         private void DisconnectDataSources()
@@ -156,16 +150,31 @@ namespace FamilyTreeWF.Forms
 
         private void ResetFilter()
         {
-            cb_filter.DataSource = null;
-            cb_filter.Text = "";
+            ResetFilterCombobox();
+            ResetFilteredPeopleList();
+            ResetListboxPeopleList();
+            SetListboxesDisplayAndValueMembers();
+            ClearRadioButtons();
+        }
+
+        private void ResetListboxPeopleList()
+        {
+            lb_peopleList.DataSource = null;
+            lb_peopleList.DataSource = filteredPeople;
+            l_peopleList.Text = "People:";
+        }
+
+        private void ResetFilteredPeopleList()
+        {
             filteredPeople.Clear();
             filteredPeople.AddRange(people);
             filteredPeople = filteredPeople.OrderBy(x => x.FirstName).ToList();
-            lb_peopleList.DataSource = null;
-            lb_peopleList.DataSource = filteredPeople;
-            ResetListboxes();
-            ClearRadioButtons();
-            l_peopleList.Text = "People:";
+        }
+
+        private void ResetFilterCombobox()
+        {
+            cb_filter.DataSource = null;
+            cb_filter.Text = "";
         }
 
         private void ClearRadioButtons()
@@ -177,7 +186,7 @@ namespace FamilyTreeWF.Forms
             rb_birthCountry.Checked = false;
         }
 
-        private void ResetListboxes()
+        private void SetListboxesDisplayAndValueMembers()
         {
             lb_peopleList.DisplayMember = "FullNameAndLifeTime";
             lb_peopleList.ValueMember = "PersonId";

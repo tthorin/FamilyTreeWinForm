@@ -79,7 +79,7 @@ namespace FamilyTreeWF.Forms
             this.lb_born.ItemHeight = 19;
             this.lb_born.Location = new System.Drawing.Point(11, 74);
             this.lb_born.Name = "lb_born";
-            this.lb_born.Size = new System.Drawing.Size(199, 232);
+            this.lb_born.Size = new System.Drawing.Size(259, 232);
             this.lb_born.TabIndex = 5;
             // 
             // lb_dead
@@ -87,9 +87,9 @@ namespace FamilyTreeWF.Forms
             this.lb_dead.DisplayMember = "FullNameAndLifeTime";
             this.lb_dead.FormattingEnabled = true;
             this.lb_dead.ItemHeight = 19;
-            this.lb_dead.Location = new System.Drawing.Point(216, 74);
+            this.lb_dead.Location = new System.Drawing.Point(276, 74);
             this.lb_dead.Name = "lb_dead";
-            this.lb_dead.Size = new System.Drawing.Size(199, 232);
+            this.lb_dead.Size = new System.Drawing.Size(259, 232);
             this.lb_dead.TabIndex = 6;
             // 
             // l_peopleBorn
@@ -104,7 +104,7 @@ namespace FamilyTreeWF.Forms
             // l_peopleDead
             // 
             this.l_peopleDead.AutoSize = true;
-            this.l_peopleDead.Location = new System.Drawing.Point(216, 52);
+            this.l_peopleDead.Location = new System.Drawing.Point(276, 52);
             this.l_peopleDead.Name = "l_peopleDead";
             this.l_peopleDead.Size = new System.Drawing.Size(188, 19);
             this.l_peopleDead.TabIndex = 4;
@@ -113,7 +113,7 @@ namespace FamilyTreeWF.Forms
             // b_addRemoveCountry
             // 
             this.b_addRemoveCountry.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_addRemoveCountry.Location = new System.Drawing.Point(235, 312);
+            this.b_addRemoveCountry.Location = new System.Drawing.Point(355, 312);
             this.b_addRemoveCountry.Name = "b_addRemoveCountry";
             this.b_addRemoveCountry.Size = new System.Drawing.Size(180, 27);
             this.b_addRemoveCountry.TabIndex = 7;
@@ -126,7 +126,7 @@ namespace FamilyTreeWF.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(430, 347);
+            this.ClientSize = new System.Drawing.Size(549, 347);
             this.Controls.Add(this.b_addRemoveCountry);
             this.Controls.Add(this.l_peopleDead);
             this.Controls.Add(this.l_peopleBorn);
@@ -138,6 +138,7 @@ namespace FamilyTreeWF.Forms
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CountryInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Country Information";
             this.ResumeLayout(false);
             this.PerformLayout();

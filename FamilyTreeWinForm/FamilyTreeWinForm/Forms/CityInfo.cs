@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------------------------------
-//  ShowCityInfo.cs by Thomas Thorin, Copyright (C) 2021.
+//  CityInfo.cs by Thomas Thorin, Copyright (C) 2021.
 //  Published under GNU General Public License v3 (GPL-3)
 // -----------------------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ namespace FamilyTreeWF.Forms
         private void Cb_countries_SelectedValueChanged(object sender, EventArgs e)
         {
             int idx = -1;
-            if (cb_cities.SelectedValue is not City && cb_cities.SelectedValue!=null) idx = cities.FindIndex(c => c.CityId == (int)cb_cities.SelectedValue);
+            if (cb_cities.SelectedValue is not City && cb_cities.SelectedValue != null) idx = cities.FindIndex(c => c.CityId == (int)cb_cities.SelectedValue);
             if (idx != -1)
             {
                 lb_born.DataSource = cities[idx].PeopleBorn;

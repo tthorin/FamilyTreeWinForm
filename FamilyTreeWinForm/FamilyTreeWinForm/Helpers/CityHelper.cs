@@ -9,6 +9,7 @@ namespace FamilyTreeWF.Helpers
     using FamilyTreeWF.DTO;
     using FamilyTreeWF.Models;
     using Microsoft.EntityFrameworkCore;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -17,12 +18,12 @@ namespace FamilyTreeWF.Helpers
         public static int RemoveCity(City city)
         {
             int rows = 0;
-            using(var db = new DbAccess())
+            using (var db = new DbAccess())
             {
-                if((db.Cities?.Any(c=>c.CityId==city.CityId && c.Name==city.Name))==true)
+                if ((db.Cities?.Any(c => c.CityId == city.CityId && c.Name == city.Name)) == true)
                 {
                     db.Cities.Remove(city);
-                    rows= db.SaveChanges();
+                    rows = db.SaveChanges();
                 }
             }
             return rows;
@@ -64,6 +65,17 @@ namespace FamilyTreeWF.Helpers
                 if (db.Cities != null) return db.Cities.Include("PeopleBorn").Include("PeopleDead").ToList();
                 else return new List<City>();
             }
+        }
+
+        internal static int RenameCity(City city)
+        {
+            var result = 0;
+            using (var db = new DbAccess())
+            {
+                db.Cities?.Update(city);
+                result = db.SaveChanges();
+            }
+            return result;
         }
 
         /// <summary>

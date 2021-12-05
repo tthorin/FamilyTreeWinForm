@@ -14,6 +14,9 @@ namespace FamilyTreeWF.Forms
     public partial class AddRemoveCity : Form
     {
         private List<City> cities = new();
+        private int id = 0;
+        private string name = "";
+
         public AddRemoveCity(List<City> cityList)
         {
             cities = cityList;
@@ -33,7 +36,7 @@ namespace FamilyTreeWF.Forms
             {
                 var city = cities.Where(c => c.Name == cb_cities.Text).FirstOrDefault(new City() { CityId = 0, Name = cb_cities.Text });
                 if (city.CityId == 0) AddCity(city);
-                else RemoveCity(city);
+                else MessageBox.Show($"A city with the name {city.Name} already exists.", "Duplicate city");
             }
         }
 
@@ -46,6 +49,18 @@ namespace FamilyTreeWF.Forms
             {
                 var result = CityHelper.RemoveCity(city);
                 if (result > 0) MessageBox.Show($"City {city.Name} removed from database.", "Success");
+                this.Close();
+            }
+        }
+        private void RenameCity(City city)
+        {
+            city = TidyUpCityName(city);
+            const MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            var answer = MessageBox.Show($"Rename city {this.name} to {city.Name}?", "Confirm rename", buttons);
+            if (answer == DialogResult.Yes)
+            {
+                int result = CityHelper.RenameCity(city);
+                if (result>0)MessageBox.Show($"City {this.name} renamed to {city.Name}.", "Success");
                 this.Close();
             }
         }
@@ -66,7 +81,7 @@ namespace FamilyTreeWF.Forms
         private static City TidyUpCityName(City city)
         {
             string name = city.Name.Trim();
-            if (name.Length >= 2) name = name[..1].ToUpper() + name[1..].ToLower();
+            if (name.Length >= 2 && !name.Contains(' ') && !string.Equals(name, name.ToUpper())) name = name[..1].ToUpper() + name[1..].ToLower();
             city.Name = name;
             return city;
         }
@@ -79,6 +94,56 @@ namespace FamilyTreeWF.Forms
             cb_cities.DisplayMember = "Name";
             cb_cities.ValueMember = "CityId";
             cb_cities.SelectedIndex = -1;
+        }
+
+        private void Cb_cities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var cb = (ComboBox)sender;
+            if (cb.SelectedIndex != -1)
+            {
+                if (cb.SelectedValue is int cityid)
+                {
+                    this.name = cb.Text;
+                    this.id = cityid;
+                    b_removeEdit.Text = "Remove";
+                    b_add.Enabled = false;
+                }
+            }
+        }
+
+        private void B_removeEdit_Click(object sender, EventArgs e)
+        {
+            var city = cities.Find(c => c.CityId == this.id);
+            if (city != null)
+            {
+                city.Name = cb_cities.Text;
+                if (b_removeEdit.Text == "Remove") RemoveCity(city);
+                else RenameCity(city);
+            }
+        }
+
+        private void Cb_cities_TextChanged(object sender, EventArgs e)
+        {
+            var cb = (ComboBox)sender;
+            if (!string.IsNullOrEmpty(this.name))
+            {
+                if (cb.Text == this.name)
+                {
+                    b_removeEdit.Text = "Remove";
+                    b_add.Enabled = false;
+                }
+                else if (cb.Text.Trim().Length < 2)
+                {
+                    b_add.Enabled = false;
+                    b_removeEdit.Enabled = false;
+                }
+                else
+                {
+                    b_add.Enabled = true;
+                    b_removeEdit.Enabled = true;
+                    b_removeEdit.Text = "Rename";
+                }
+            }
         }
     }
 }
