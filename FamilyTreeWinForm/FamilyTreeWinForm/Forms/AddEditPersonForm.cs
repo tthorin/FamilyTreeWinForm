@@ -141,8 +141,9 @@ namespace FamilyTreeWF.Forms
             else
             {
                 SetPersonValues();
-                int result = PersonHelper.UpsertPerson(person);
-                if(result>0) MessageBox.Show("Submission successful", "Success");
+                (int rowsAffected, bool duplicate) = PersonHelper.UpsertPerson(person);
+                if (rowsAffected > 0) MessageBox.Show("Submission successful", "Success");
+                else if (duplicate) MessageBox.Show("Person with same data already exists in database","Duplicate");
                 this.Close();
             }
         }

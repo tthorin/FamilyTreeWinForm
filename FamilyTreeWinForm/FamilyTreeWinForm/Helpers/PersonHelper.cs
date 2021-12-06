@@ -29,6 +29,20 @@ namespace FamilyTreeWF.Helpers
                 return person ?? new Person();
             }
         }
+        public static bool CheckForDuplicate(Person person)
+        {
+            using (var db = new DbAccess())
+            {
+                var duplicate = db.People?.Where(d => d.FirstName == person.FirstName
+                                                    && d.LastName == person.LastName
+                                                    && d.BirthYear == person.BirthYear
+                                                    && d.FatherId == person.FatherId
+                                                    && d.MotherId == person.MotherId)
+                                           .FirstOrDefault(new Person { PersonId = 0 });
+                bool duplicateExists = duplicate?.PersonId != 0;
+                return duplicateExists;
+            }
+        }
         public static List<Person> GetAllPeople()
         {
             using (var db = new DbAccess())
@@ -55,18 +69,24 @@ namespace FamilyTreeWF.Helpers
             }
         }
 
-        internal static int UpsertPerson(Person input)
+        internal static (int,bool) UpsertPerson(Person input)
         {
+            var isPersonInDb = false;
             using (var db = new DbAccess())
             {
                 if (input.PersonId == 0)
                 {
-                    db.Entry(input).State = EntityState.Added;
-                    db.People?.Add(input);
+                    isPersonInDb = CheckForDuplicate(input);
+                    if (!isPersonInDb)
+                    {
+                        db.Entry(input).State = EntityState.Added;
+                        db.People?.Add(input);
+                    }
                 }
                 else db.Entry(input).State = EntityState.Modified;
 
-                return db.SaveChanges();
+                var rowsAffected= db.SaveChanges();
+                return (rowsAffected, isPersonInDb);
             }
         }
         public static List<Person> GetChildren(Person person)
